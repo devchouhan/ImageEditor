@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/WelcomeTo"
+        android:textSize="@dimen/_16sdp"
+        android:id="@+id/title"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/imageView"
+        app:layout_constraintLeft_toRightOf="@id/guideLeft"
+        app:layout_constraintRight_toLeftOf="@id/guideRight"
+        app:layout_constraintTop_toBottomOf="@id/guideTop" />
+
+    <ImageView
+        android:contentDescription="@string/mainImageDesc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/dummy"
+        android:id="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintRight_toLeftOf="@id/guideRight"
+        app:layout_constraintLeft_toRightOf="@id/guideLeft"
+        app:layout_constraintBottom_toTopOf="@id/optionFrame" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/black"
+        android:id="@+id/optionFrame"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintBottom_toTopOf="@id/guideBottom"
+        app:layout_constraintLeft_toRightOf="@id/guideLeft"
+        app:layout_constraintRight_toLeftOf="@id/guideRight">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:id="@+id/selectImageTV"
+            android:textColor="@color/white"
+            android:text="@string/selectImage"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:id="@+id/cropImageTV"
+            android:textColor="@color/white"
+            android:text="@string/crop"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/rotateImageTV"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/rotate"/>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="@dimen/_20sdp"
+        android:id="@+id/guideRight"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideTop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintGuide_begin="@dimen/_20sdp"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideLeft"
+        app:layout_constraintGuide_begin="@dimen/_20sdp"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideBottom"
+        app:layout_constraintGuide_end="@dimen/_20sdp"
+        android:orientation="horizontal"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

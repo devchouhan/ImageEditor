@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ImageEditor</string>
+    <string name="WelcomeTo">Welcome to Image Editor</string>
+    <string name="selectImage">Select Image</string>
+    <string name="crop">Crop</string>
+    <string name="rotate">Rotate</string>
+    <string name="mainImageDesc">mainImageDescription</string>
+</resources>
